@@ -9,15 +9,12 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State private var username: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var confirmPassword: String = ""
-
-    var usernameError: String = "Required"
-    var emailError: String = "Required"
-    var passwordError: String = "Required"
-    var confirmPasswordError: String = "Required"
+    
+    @ObservedObject private var viewModel: SignUpViewModel
+   
+    init(viewModel: SignUpViewModel) {
+        self.viewModel = viewModel
+    }
 
     var body: some View {
         
@@ -30,10 +27,10 @@ struct SignUpView: View {
                     .foregroundColor(.white)
                     .padding(.bottom, 20)
                 
-                AuthTextField(textValue: $username, title: "Username", errorValue:usernameError)
-                AuthTextField(textValue: $email, title: "Email Address", errorValue:emailError, keyboardType: .emailAddress)
-                AuthTextField(textValue: $password, title: "Password", errorValue:passwordError, isSecured: true)
-                AuthTextField(textValue: $confirmPassword, title: "Confirm Password", errorValue:confirmPasswordError, isSecured: true)
+                AuthTextField(textValue: $viewModel.username, title: "Username", errorValue:viewModel.usernameError)
+                AuthTextField(textValue: $viewModel.email, title: "Email Address", errorValue:viewModel.emailError, keyboardType: .emailAddress)
+                AuthTextField(textValue: $viewModel.password, title: "Password", errorValue:viewModel.passwordError, isSecured: true)
+                AuthTextField(textValue: $viewModel.confirmPassword, title: "Confirm Password", errorValue:viewModel.confirmPasswordError, isSecured: true)
 
                 Button(action: signUp) {
                     Text("Sign Up")
@@ -57,7 +54,8 @@ struct SignUpView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        let viewModel = SignUpViewModel()
+        return SignUpView(viewModel: viewModel)
     }
 }
 

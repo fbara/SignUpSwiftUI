@@ -14,6 +14,7 @@
 		AD1A961723B483F4005DDBFB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD1A961623B483F4005DDBFB /* Preview Assets.xcassets */; };
 		AD1A961A23B483F4005DDBFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1A961823B483F4005DDBFB /* LaunchScreen.storyboard */; };
 		AD1A962323B484B8005DDBFB /* ColorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A962223B484B8005DDBFB /* ColorCodes.swift */; };
+		ADC76A4623B6A20D00F44F00 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC76A4523B6A20D00F44F00 /* SignUpViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AD1A961923B483F4005DDBFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD1A961B23B483F4005DDBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1A962223B484B8005DDBFB /* ColorCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCodes.swift; sourceTree = "<group>"; };
+		ADC76A4523B6A20D00F44F00 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		AD1A960123B483F2005DDBFB = {
 			isa = PBXGroup;
 			children = (
+				ADC76A4423B6A1F200F44F00 /* ViewModels */,
 				AD1A962123B4849F005DDBFB /* Models */,
 				AD1A960C23B483F2005DDBFB /* SignUpSwiftUI */,
 				AD1A960B23B483F2005DDBFB /* Products */,
@@ -84,6 +87,14 @@
 				AD1A962223B484B8005DDBFB /* ColorCodes.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ADC76A4423B6A1F200F44F00 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ADC76A4523B6A20D00F44F00 /* SignUpViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			files = (
 				AD1A962323B484B8005DDBFB /* ColorCodes.swift in Sources */,
 				AD1A960E23B483F2005DDBFB /* AppDelegate.swift in Sources */,
+				ADC76A4623B6A20D00F44F00 /* SignUpViewModel.swift in Sources */,
 				AD1A961023B483F2005DDBFB /* SceneDelegate.swift in Sources */,
 				AD1A961223B483F2005DDBFB /* SignUpView.swift in Sources */,
 			);
