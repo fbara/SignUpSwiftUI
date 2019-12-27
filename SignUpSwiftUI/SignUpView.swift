@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SignUpView: View {
     @State private var username: String = ""
-    @State private var email: String = "m"
+    @State private var email: String = ""
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
 
@@ -35,10 +35,23 @@ struct SignUpView: View {
                 AuthTextField(textValue: $password, title: "Password", errorValue:passwordError, isSecured: true)
                 AuthTextField(textValue: $confirmPassword, title: "Confirm Password", errorValue:confirmPasswordError, isSecured: true)
 
+                Button(action: signUp) {
+                    Text("Sign Up")
+                }
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.black)
+                .cornerRadius(.infinity)
+                .padding(.top, 20)
 
             }.padding(60.0)
 
         }
+    }
+    
+    func signUp() -> Void {
+        print("Sign up tapped!")
     }
 }
 
