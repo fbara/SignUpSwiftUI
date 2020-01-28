@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D4F229BE33B090F36A48575 /* Pods_SignUpSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23210476AC3C71983E008EF /* Pods_SignUpSwiftUI.framework */; };
 		AD1A960E23B483F2005DDBFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A960D23B483F2005DDBFB /* AppDelegate.swift */; };
 		AD1A961023B483F2005DDBFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A960F23B483F2005DDBFB /* SceneDelegate.swift */; };
 		AD1A961223B483F2005DDBFB /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A961123B483F2005DDBFB /* SignUpView.swift */; };
@@ -15,9 +16,21 @@
 		AD1A961A23B483F4005DDBFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD1A961823B483F4005DDBFB /* LaunchScreen.storyboard */; };
 		AD1A962323B484B8005DDBFB /* ColorCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A962223B484B8005DDBFB /* ColorCodes.swift */; };
 		ADC76A4623B6A20D00F44F00 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC76A4523B6A20D00F44F00 /* SignUpViewModel.swift */; };
+		ADC76A4923BE7B2600F44F00 /* AuthHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC76A4823BE7B2600F44F00 /* AuthHttpService.swift */; };
+		ADC76A4B23C45C2500F44F00 /* AuthHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC76A4A23C45C2500F44F00 /* AuthHttpRouter.swift */; };
+		ADC76A4D23C45D8D00F44F00 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC76A4C23C45D8D00F44F00 /* AuthModel.swift */; };
+		ADC76A4F23C45EC600F44F00 /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC76A4E23C45EC600F44F00 /* HttpRouter.swift */; };
+		ADC76A5123C4611100F44F00 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC76A5023C4611100F44F00 /* HttpService.swift */; };
+		ADD3A23723D62B680045BBAC /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3A23623D62B680045BBAC /* AuthAPI.swift */; };
+		ADD3A23D23D62CE80045BBAC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3A23C23D62CE80045BBAC /* AuthService.swift */; };
+		ADD3A23F23DFEA9D0045BBAC /* AuthServiceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3A23E23DFEA9D0045BBAC /* AuthServiceParser.swift */; };
+		ADD3A24123DFEFBF0045BBAC /* TokenResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3A24023DFEFBF0045BBAC /* TokenResponseModel.swift */; };
+		ADD3A24323DFF15A0045BBAC /* SignUpErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD3A24223DFF15A0045BBAC /* SignUpErrorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A2D4FE13DD9383C6473E1CE /* Pods-SignUpSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignUpSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-SignUpSwiftUI/Pods-SignUpSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		41BDDF03BD4C82C7BF235B65 /* Pods-SignUpSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignUpSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-SignUpSwiftUI/Pods-SignUpSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		AD1A960A23B483F2005DDBFB /* SignUpSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1A960D23B483F2005DDBFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD1A960F23B483F2005DDBFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +41,17 @@
 		AD1A961B23B483F4005DDBFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD1A962223B484B8005DDBFB /* ColorCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCodes.swift; sourceTree = "<group>"; };
 		ADC76A4523B6A20D00F44F00 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		ADC76A4823BE7B2600F44F00 /* AuthHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHttpService.swift; sourceTree = "<group>"; };
+		ADC76A4A23C45C2500F44F00 /* AuthHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHttpRouter.swift; sourceTree = "<group>"; };
+		ADC76A4C23C45D8D00F44F00 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		ADC76A4E23C45EC600F44F00 /* HttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRouter.swift; sourceTree = "<group>"; };
+		ADC76A5023C4611100F44F00 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		ADD3A23623D62B680045BBAC /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		ADD3A23C23D62CE80045BBAC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		ADD3A23E23DFEA9D0045BBAC /* AuthServiceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceParser.swift; sourceTree = "<group>"; };
+		ADD3A24023DFEFBF0045BBAC /* TokenResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponseModel.swift; sourceTree = "<group>"; };
+		ADD3A24223DFF15A0045BBAC /* SignUpErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpErrorModel.swift; sourceTree = "<group>"; };
+		B23210476AC3C71983E008EF /* Pods_SignUpSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignUpSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,19 +59,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4F229BE33B090F36A48575 /* Pods_SignUpSwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DB36FCCA410CF8984233126 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B23210476AC3C71983E008EF /* Pods_SignUpSwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD1A960123B483F2005DDBFB = {
 			isa = PBXGroup;
 			children = (
+				ADC76A4723BE7B0E00F44F00 /* Services */,
 				ADC76A4423B6A1F200F44F00 /* ViewModels */,
 				AD1A962123B4849F005DDBFB /* Models */,
 				AD1A960C23B483F2005DDBFB /* SignUpSwiftUI */,
 				AD1A960B23B483F2005DDBFB /* Products */,
+				CCF127961FD4E9EC1B7EBBCA /* Pods */,
+				3DB36FCCA410CF8984233126 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				AD1A962223B484B8005DDBFB /* ColorCodes.swift */,
+				ADC76A4C23C45D8D00F44F00 /* AuthModel.swift */,
+				ADD3A24023DFEFBF0045BBAC /* TokenResponseModel.swift */,
+				ADD3A24223DFF15A0045BBAC /* SignUpErrorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,6 +136,29 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		ADC76A4723BE7B0E00F44F00 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ADC76A4823BE7B2600F44F00 /* AuthHttpService.swift */,
+				ADC76A4A23C45C2500F44F00 /* AuthHttpRouter.swift */,
+				ADC76A4E23C45EC600F44F00 /* HttpRouter.swift */,
+				ADC76A5023C4611100F44F00 /* HttpService.swift */,
+				ADD3A23623D62B680045BBAC /* AuthAPI.swift */,
+				ADD3A23C23D62CE80045BBAC /* AuthService.swift */,
+				ADD3A23E23DFEA9D0045BBAC /* AuthServiceParser.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CCF127961FD4E9EC1B7EBBCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A2D4FE13DD9383C6473E1CE /* Pods-SignUpSwiftUI.debug.xcconfig */,
+				41BDDF03BD4C82C7BF235B65 /* Pods-SignUpSwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD1A961E23B483F4005DDBFB /* Build configuration list for PBXNativeTarget "SignUpSwiftUI" */;
 			buildPhases = (
+				BA1AA54DAAB820A7A7C0F8E9 /* [CP] Check Pods Manifest.lock */,
 				AD1A960623B483F2005DDBFB /* Sources */,
 				AD1A960723B483F2005DDBFB /* Frameworks */,
 				AD1A960823B483F2005DDBFB /* Resources */,
+				36A386FA0F749996002FB46F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,16 +227,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36A386FA0F749996002FB46F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SignUpSwiftUI/Pods-SignUpSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SignUpSwiftUI/Pods-SignUpSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SignUpSwiftUI/Pods-SignUpSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA1AA54DAAB820A7A7C0F8E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SignUpSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD1A960623B483F2005DDBFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AD1A962323B484B8005DDBFB /* ColorCodes.swift in Sources */,
+				ADC76A4923BE7B2600F44F00 /* AuthHttpService.swift in Sources */,
+				ADD3A24123DFEFBF0045BBAC /* TokenResponseModel.swift in Sources */,
+				ADD3A23723D62B680045BBAC /* AuthAPI.swift in Sources */,
+				ADD3A23D23D62CE80045BBAC /* AuthService.swift in Sources */,
+				ADC76A4B23C45C2500F44F00 /* AuthHttpRouter.swift in Sources */,
 				AD1A960E23B483F2005DDBFB /* AppDelegate.swift in Sources */,
 				ADC76A4623B6A20D00F44F00 /* SignUpViewModel.swift in Sources */,
+				ADD3A23F23DFEA9D0045BBAC /* AuthServiceParser.swift in Sources */,
+				ADD3A24323DFF15A0045BBAC /* SignUpErrorModel.swift in Sources */,
+				ADC76A4D23C45D8D00F44F00 /* AuthModel.swift in Sources */,
 				AD1A961023B483F2005DDBFB /* SceneDelegate.swift in Sources */,
 				AD1A961223B483F2005DDBFB /* SignUpView.swift in Sources */,
+				ADC76A4F23C45EC600F44F00 /* HttpRouter.swift in Sources */,
+				ADC76A5123C4611100F44F00 /* HttpService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +422,7 @@
 		};
 		AD1A961F23B483F4005DDBFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A2D4FE13DD9383C6473E1CE /* Pods-SignUpSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -326,6 +443,7 @@
 		};
 		AD1A962023B483F4005DDBFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41BDDF03BD4C82C7BF235B65 /* Pods-SignUpSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
