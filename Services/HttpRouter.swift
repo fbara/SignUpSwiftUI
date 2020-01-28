@@ -16,7 +16,7 @@ protocol HttpRouter: URLRequestConvertible {
     var parameters: Parameters? { get }
     func body() throws -> Data?
     
-    func request(usingHttpService service: HttpService) throws -> DataRequest
+    func request(usingHttpsService service: HttpService) throws -> DataRequest
 }
 
 extension HttpRouter {

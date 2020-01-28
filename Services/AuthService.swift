@@ -28,6 +28,26 @@ class AuthService {
 }
 
 extension AuthService: AuthAPI {
+    func checkEmail(email: String) -> Future<Bool, Never> {
+        return Future<Bool, Never> { [httpService] promise in
+            
+            do {
+                try AuthHttpRouter
+                    .validateEmail(email: email)
+                    .request(usingHttpsService: httpService)
+                    .responseJSON { (response) in
+                        guard response.response?.statusCode == 200 else {
+                            promise(.success(false))
+                            return
+                        }
+                        promise(.success(true))
+                }
+            } catch {
+                promise(.success(false))
+            }
+        }
+    }
+    
     
     func signUp(username: String, email: String, password: String) -> Future<(statusCode: Int, data: Data), Error> {
         
@@ -43,6 +63,7 @@ extension AuthService: AuthAPI {
                             let data = response.data,
                             statusCode == 200 else {
                                 promise(.failure(SignUpError.invalidData))
+                                return
                         }
                         promise(.success((statusCode, data: data)))
                 }
@@ -54,23 +75,23 @@ extension AuthService: AuthAPI {
     }
 }
 
-func checkEmail(email: String) -> Future<Bool, Never> {
-    
-    return Future<(Bool, Never)> { [httpService] promise in
-        
-        do {
-            try AuthHttpRouter
-                .validateEmail(email: email)
-                .request(usingHttpService: httpService)
-                .responseJSON { (response) in
-                    guard response.response?.statusCode == 200 else {
-                        promise(.success(false))
-                        return
-                    }
-                    promise(.success(true))
-            }
-        } catch {
-            promise(.success(false))
-        }
-    }
-}
+//func checkEmail(email: String) -> Future<Bool, Never> {
+//    
+//    return Future<Bool, Never> { [httpService] promise in
+//        
+//        do {
+//            try AuthHttpRouter
+//                .validateEmail(email: email)
+//                .request(usingHttpService: httpService)
+//                .responseJSON { (response) in
+//                    guard response.response?.statusCode == 200 else {
+//                        promise(.success(false))
+//                        return
+//                    }
+//                    promise(.success(true))
+//            }
+//        } catch {
+//            promise(.success(false))
+//        }
+//    }
+//}
