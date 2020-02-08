@@ -54,7 +54,7 @@ struct SignUpView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let viewModel = SignUpViewModel()
+        let viewModel = SignUpViewModel(authAPI: AuthService.shared, authServiceParser: AuthServiceParser.shared)
         return SignUpView(viewModel: viewModel)
     }
 }

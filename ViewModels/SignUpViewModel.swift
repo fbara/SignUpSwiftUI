@@ -11,6 +11,9 @@ import Combine
 
 class SignUpViewModel: ObservableObject {
     
+    
+    private let authAPI: AuthAPI
+    private let authServiceParser: AuthServiceParseable
     private var cancellableBag = Set<AnyCancellable>()
     
     @Published var username: String = ""
@@ -42,6 +45,13 @@ class SignUpViewModel: ObservableObject {
         return emailRequiredPublisher
             .filter { $0.isValid }
             .map { (email: $0.email, isValid: $0.email.isValidEmail()) }
+            .eraseToAnyPublisher()
+    }
+    
+    private var emailServerValidPublisher: AnyPublisher<(email: String, isValid: Bool), Never> {
+        
+        return emailValidPublisher
+            .filter { $0.isValid }
             .eraseToAnyPublisher()
     }
     
@@ -78,7 +88,10 @@ class SignUpViewModel: ObservableObject {
     }
 
     
-    init() {
+    init(authAPI: AuthAPI, authServiceParser: AuthServiceParseable) {
+        
+        self.authAPI = authAPI
+        self.authServiceParser = authServiceParser
         
         usernameValidPublisher
             .receive(on: RunLoop.main)

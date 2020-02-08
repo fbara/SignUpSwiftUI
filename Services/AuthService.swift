@@ -74,24 +74,3 @@ extension AuthService: AuthAPI {
         }
     }
 }
-
-//func checkEmail(email: String) -> Future<Bool, Never> {
-//    
-//    return Future<Bool, Never> { [httpService] promise in
-//        
-//        do {
-//            try AuthHttpRouter
-//                .validateEmail(email: email)
-//                .request(usingHttpService: httpService)
-//                .responseJSON { (response) in
-//                    guard response.response?.statusCode == 200 else {
-//                        promise(.success(false))
-//                        return
-//                    }
-//                    promise(.success(true))
-//            }
-//        } catch {
-//            promise(.success(false))
-//        }
-//    }
-//}

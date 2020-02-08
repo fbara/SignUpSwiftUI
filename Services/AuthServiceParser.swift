@@ -7,13 +7,13 @@
 //
 
 import Foundation
-import  Combine
+import Combine
 
 protocol AuthServiceParseable {
     func parseSignUpResponse(statusCode: Int, data: Data) -> AnyPublisher<AuthResult<TokenResponseModel>, Error>
 }
 
-class AuthServiceParser {
+class AuthServiceParser: AuthServiceParseable {
     
     static let shared: AuthServiceParser = AuthServiceParser()
     
