@@ -32,23 +32,26 @@ struct SignUpView: View {
                 AuthTextField(textValue: $viewModel.password, title: "Password", errorValue:viewModel.passwordError, isSecured: true)
                 AuthTextField(textValue: $viewModel.confirmPassword, title: "Confirm Password", errorValue:viewModel.confirmPasswordError, isSecured: true)
 
-                Button(action: signUp) {
+                Button(action: viewModel.signUp) {
                     Text("Sign Up")
                 }
+                .disabled(viewModel.enableSignUp)
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .foregroundColor(.white)
                 .padding()
-                .background(Color.black)
+                .background(viewModel.enableSignUp ? Color.black : Color.gray)
                 .cornerRadius(.infinity)
                 .padding(.top, 20)
-
+                
+                Text(viewModel.statusViewModel.title)
+                    .font(.headline)
+                    .fontWeight(.light)
+                    .foregroundColor(viewModel.statusViewModel.color.color())
+                    .padding(
+                        .top)
             }.padding(60.0)
 
         }
-    }
-    
-    func signUp() -> Void {
-        print("Sign up tapped!")
     }
 }
 
